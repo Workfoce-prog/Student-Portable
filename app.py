@@ -45,7 +45,7 @@ with tab2:
 with tab3:
     st.subheader("💳 Make a Tuition Payment")
     st.write(f"**Current Balance:** ${student.TotalTuitionDue - student.AmountPaid:,.2f}")
-    amount = st.number_input("Enter Payment Amount", 0.0, student.TotalTuitionDue - student.AmountPaid, 10.0)
+    amount = st.number_input("Enter Payment Amount", min_value= 0.0, max_value=float(student.TotalTuitionDue - student.AmountPaid),step= 10.0)
     method = st.selectbox("Payment Method", ["Credit Card", "Debit Card", "Bank Transfer", "Cash", "Check"])
     note = st.text_input("Notes or Reference")
     if st.button("Submit Payment"):
