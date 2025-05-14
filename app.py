@@ -28,7 +28,7 @@ authenticator = stauth.Authenticate(
     "stratai_cookie", "stratai_signature_key",
     cookie_expiry_days=1
 )
-name, auth_status, username = authenticator.login("Login")
+name, auth_status, username = authenticator.login("Login",location="sidebar")
 
 if auth_status:
     st.sidebar.success(f"Welcome {name}")
