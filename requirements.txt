@@ -1,5 +1,0 @@
-streamlit
-streamlit-authenticator
-pandas
-pyyaml
-google-cloud-translate
